@@ -37,6 +37,17 @@ export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64   # adjust to your distro
 sdkmanager "platform-tools" "platforms;android-35" "ndk;29.0.14206865" "cmake;3.30.3"
 ```
 
+### macOS host
+
+```bash
+# JDK 21 + Python + the SPIR-V shader toolchain
+brew install openjdk@21 python glslang spirv-tools
+export JAVA_HOME=$(brew --prefix openjdk@21)
+
+# Android SDK pieces (via Android Studio, or cmdline-tools' sdkmanager):
+sdkmanager "platform-tools" "platforms;android-35" "ndk;29.0.14206865" "cmake;3.30.3"
+```
+
 ### Windows host
 
 1. **JDK 21** — install Microsoft OpenJDK or Temurin 21 (or reuse Android
